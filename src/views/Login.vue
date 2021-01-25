@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-card class="mx-auto" max-width="250" outlined>
+    <v-card class="mx-auto" max-width="350" outlined>
       <div class="flex-column mt-3">
         <div class="d-flex justify-center">
           Please login
@@ -19,6 +19,7 @@
             v-if="isLoggedIn"
             class="mt-5 px-5"
             label="Please enter your api key"
+            @keydown.enter="login"
           >
             {{ apiKey }}
           </v-text-field>
